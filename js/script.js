@@ -22,16 +22,16 @@ console.log(spanSquare);
 //variabile contenente il livello scelto
 let liv;
 if(choiseLiv == 1){
-    i = 100;
+    liv = 100;
 } else if(choiseLiv == 2){
-    i = 81;
+    liv = 81;
 } else if (choiseLiv == 3){
-    i = 49;
+    liv = 49;
 }
-console.log(i);
+
 
 // 4. ciclo per inserire i quadrati nel dom
-for ( let i = 0; i < liv ; i++){
+for ( let i = 1; i <= liv ; i++){
 
     spanSquare.append(i);
     gameSquare.append(spanSquare);
