@@ -10,29 +10,28 @@
 
 
 // creo un promt per la scelta del livello
-/* const choiseLiv = parseInt(prompt("scegli il livello digitando 1, 2 o 3")); */
-let btnChoise = document.querySelector("button");
+const choiseLiv = parseInt(prompt("scegli il livello digitando 1, 2 o 3"));
+/* let btnChoise = document.querySelector("button");
+let choise;
 console.log(btnChoise);
 
 let choiseLiv;
 btnChoise.addEventListener("click",
 
-    function () {
-        choiseLiv = document.querySelectorAll("option").value; 
+    function choiseLiv() {
+        choise = document.querySelector("select").value;
+        console.log(choise); 
     }
-)
-console.log(choiseLiv);
-
-
+) */
 const squareCont = document.querySelector(".container-game");
 console.log(squareCont);
 
 //variabile contenente il livello scelto
-if(choiseLiv == 1){
+if(choiseLiv == "easy"){
     gridGen(100, "liv-1");
-} else if(choiseLiv == 2){
+} else if(choiseLiv == "medium"){
     gridGen(81, "liv-2");
-} else if (choiseLiv == 3){
+} else if (choiseLiv == "hard"){
     gridGen(49, "liv-3");
 }
 
