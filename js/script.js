@@ -5,7 +5,7 @@
     // 2.3 se scegli 3 compare il gioco con una griglia 7 x 7
 // DONE=> 3 creo una funzione per creare un elemento
 // DONE=> 4 creo un ciclo che mi permetta di inserire i quadrati nel DOM
-    // 4.1 se l'utente clicca su una delle caselle del gioco la casella cambia colore
+    // DONE=> 4.1 se l'utente clicca su una delle caselle del gioco la casella cambia colore
 
 
 
@@ -16,46 +16,35 @@ const squareCont = document.querySelector(".container-game");
 console.log(squareCont);
 
 //variabile contenente il livello scelto
-let liv;
 if(choiseLiv == 1){
-    liv = 100;
+    gridGen(100, "liv-1");
 } else if(choiseLiv == 2){
-    liv = 81;
+    gridGen(81, "liv-2");
 } else if (choiseLiv == 3){
-    liv = 49;
+    gridGen(49, "liv-3");
 }
 
 
+function gridGen(liv, classLiv) {
 // 4. ciclo per inserire i quadrati nel dom
 for ( let i = 1; i <= liv ; i++){
     // 3. variabile con l'elemento creato
     let gameSquare = genElement("div", "square");
     let spanSquare = document.createElement("span");
-    spanSquare.append(i);
     gameSquare.appendChild(spanSquare);
-
-    if( liv == 100){
-        gameSquare.classList.add("liv-1");
-    } else if (liv == 81){
-        gameSquare.classList.add("liv-2");
-    } else if (liv == 49){
-        gameSquare.classList.add("liv-3");
-    }
-    
+    gameSquare.classList.add(classLiv);
     
     gameSquare.addEventListener("click",
 
         function(){
             gameSquare.classList.add("active");
+            spanSquare.innerText = i;
         }
 
-    )
+    );
     squareCont.append(gameSquare);
 }
-
-
-
-
+}
 
 /* funzioni utili */
 //funzione per generare un elemento
