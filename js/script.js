@@ -27,11 +27,11 @@ const squareCont = document.querySelector(".container-game");
 console.log(squareCont);
 
 //variabile contenente il livello scelto
-if(choiseLiv == "easy"){
+if(choiseLiv == 1){
     gridGen(100, "liv-1");
-} else if(choiseLiv == "medium"){
+} else if(choiseLiv == 2){
     gridGen(81, "liv-2");
-} else if (choiseLiv == "hard"){
+} else if (choiseLiv == 3){
     gridGen(49, "liv-3");
 }
 
