@@ -11,17 +11,24 @@ body {
 
 .content-centering {
     margin: 0 auto;
-    width: 60%;
+    width: 40%;
 }
 
 h1 {
     text-align: center;
     color: white;
     font-size: 55px;
+    margin-bottom: 20px
+}
+
+.choise-difficulty span {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .container-game {
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;

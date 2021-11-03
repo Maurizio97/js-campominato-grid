@@ -10,7 +10,19 @@
 
 
 // creo un promt per la scelta del livello
-const choiseLiv = parseInt(prompt("scegli il livello digitando 1, 2 o 3"));
+/* const choiseLiv = parseInt(prompt("scegli il livello digitando 1, 2 o 3")); */
+let btnChoise = document.querySelector("button");
+console.log(btnChoise);
+
+let choiseLiv;
+btnChoise.addEventListener("click",
+
+    function () {
+        choiseLiv = document.querySelectorAll("option").value; 
+    }
+)
+console.log(choiseLiv);
+
 
 const squareCont = document.querySelector(".container-game");
 console.log(squareCont);
@@ -33,12 +45,12 @@ for ( let i = 1; i <= liv ; i++){
     let spanSquare = document.createElement("span");
     gameSquare.appendChild(spanSquare);
     gameSquare.classList.add(classLiv);
-    
+    spanSquare.append(i);
+
     gameSquare.addEventListener("click",
 
         function(){
-            gameSquare.classList.add("active");
-            spanSquare.innerText = i;
+            this.classList.add("active");
         }
 
     );
